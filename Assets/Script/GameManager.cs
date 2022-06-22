@@ -11,6 +11,11 @@ public class GameManager : MonoBehaviour
     public delegate void gameEvent();
     public static event gameEvent OnPlayerDeath;
     public static event gameEvent OnScoreIncrease;
+    private static GameManager _instance;
+    public static GameManager Instance
+    {
+        get { return _instance; }
+    }
 	
 	public  void  increaseScore(){
 		playerScore  +=  1;
@@ -18,7 +23,17 @@ public class GameManager : MonoBehaviour
         OnScoreIncrease();
 	}
 
+    void Awake()
+    {
+        if(_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
 
+        _instance = this;
+        DontDestroyOnLoad(this.gameObject);
+    }
 
     // Start is called before the first frame update
     void Start()

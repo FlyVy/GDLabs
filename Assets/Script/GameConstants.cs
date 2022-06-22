@@ -31,4 +31,9 @@ public  class GameConstants : ScriptableObject
     
     // for testing
     public  int testValue;
+
+    // Mario basic starting values
+    public int playerStartingMaxSpeed = 5;
+    public int playerMaxJumpSpeed = 30;
+    public int playerDefaultForce = 150;
 }

@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 6006367503063909799}
   - component: {fileID: 6006367503063909796}
   - component: {fileID: 6006367503063909797}
-  - component: {fileID: 2112961402101925622}
+  - component: {fileID: 7307371990437508939}
+  - component: {fileID: 549370263915989284}
   m_Layer: 0
   m_Name: Turtle
   m_TagString: Enemy
@@ -76,12 +77,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 47998ed7069af2d4381e4ea7b51d26b5, type: 3}
+  m_Sprite: {fileID: 508193999, guid: 47998ed7069af2d4381e4ea7b51d26b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 10.6875, y: 16.3125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -123,18 +124,18 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 3.125, z: 0, w: 3.125}
+    border: {x: 0.75, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 15.625, y: 21.875}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 10.6875, y: 16.3125}
+    newSize: {x: 10.6875, y: 16.3125}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 10.5, y: 16}
   m_EdgeRadius: 0
---- !u!114 &2112961402101925622
+--- !u!114 &7307371990437508939
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +144,65 @@ MonoBehaviour:
   m_GameObject: {fileID: 6006367503063909786}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6357d0215b1aea043af5b7d24da23594, type: 3}
+  m_Script: {fileID: 11500000, guid: 197ee28b5092098418740e32b30f92f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPlayerDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 1e464b40c91f59d46853cbfb10702423, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onEnemyDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: f19921d7f4fc4d446891ba38579d3c49, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   gameConstants: {fileID: 11400000, guid: 69a00a19484343a4883740996ec5e36e, type: 2}
+--- !u!114 &549370263915989284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6006367503063909786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334ae3e3d29d90341bc5b9a780b46553, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 1e464b40c91f59d46853cbfb10702423, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7307371990437508939}
+        m_TargetAssemblyTypeName: EnemyControllerEV, Assembly-CSharp
+        m_MethodName: EnemyRejoice
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

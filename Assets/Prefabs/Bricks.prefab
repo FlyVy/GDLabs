@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7775755004455410335}
   - component: {fileID: 3727495112612407952}
-  - component: {fileID: 55040630760924746}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Obstacles
@@ -55,19 +54,6 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &55040630760924746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 543070819916617810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef06fce4b17368943a1b73d3b310c8b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 4205747203963495674, guid: 0b3e87de0fcf2714ca820b97381898d6, type: 3}
 --- !u!1 &901677820619009874
 GameObject:
   m_ObjectHideFlags: 0

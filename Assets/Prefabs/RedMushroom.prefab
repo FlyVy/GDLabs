@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4604702605708838310}
   - component: {fileID: 7373923328908584637}
   - component: {fileID: 7704058605362709237}
-  - component: {fileID: 3338172539138745201}
+  - component: {fileID: -3522076641649506676}
   m_Layer: 9
   m_Name: RedMushroom
   m_TagString: Untagged
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7169752745984176783}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.11, y: 4.13, z: -10}
+  m_LocalPosition: {x: -10.11, y: 4.13, z: 0}
   m_LocalScale: {x: 0.11586711, y: 0.11586711, z: 0.11586711}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -96,7 +96,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -112,7 +112,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.4, y: 6.4}
   m_EdgeRadius: 0
---- !u!114 &3338172539138745201
+--- !u!114 &-3522076641649506676
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,7 +121,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 7169752745984176783}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d5b3ad424824d94c8513bf7a92cffc5, type: 3}
+  m_Script: {fileID: 11500000, guid: 51a67c1f86a2ab3429a00e7304dc2f07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  t: {fileID: 2800000, guid: 6020be8ef2d72654da0d760a351ab8df, type: 3}
+  stats: {fileID: 11400000, guid: 5f4c62beb88395143a98b5e68d570f6f, type: 2}
+  onCollected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: a438f787bca8fd94db526251e4533fe7, type: 2}
+        m_TargetAssemblyTypeName: PowerupEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

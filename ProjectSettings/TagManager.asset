@@ -48,12 +48,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Characters
-    uniqueID: 221793789
+  - name: Obstacles
+    uniqueID: 1677551435
     locked: 0
   - name: Ground
     uniqueID: 1238583659
     locked: 0
-  - name: Obstacles
-    uniqueID: 1677551435
+  - name: Characters
+    uniqueID: 221793789
     locked: 0

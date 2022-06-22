@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4434107952312322919}
   - component: {fileID: 2821867463368616051}
   - component: {fileID: 879670010678451940}
-  - component: {fileID: -782181006422719372}
+  - component: {fileID: 2505135485105519479}
   m_Layer: 9
   m_Name: Mushroom
   m_TagString: Untagged
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   maxSpeed: 6
---- !u!114 &-782181006422719372
+--- !u!114 &2505135485105519479
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,7 +158,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 834953107195518105}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18a28ea514ae08540b686f0d050c680a, type: 3}
+  m_Script: {fileID: 11500000, guid: 51a67c1f86a2ab3429a00e7304dc2f07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  t: {fileID: 2800000, guid: 9cd8591e3bf64aa4c85e303e9c9d04ec, type: 3}
+  stats: {fileID: 11400000, guid: 7f9c41f9bf3fdb64ba9c65bed96e7f4d, type: 2}
+  onCollected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: a438f787bca8fd94db526251e4533fe7, type: 2}
+        m_TargetAssemblyTypeName: PowerupEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
